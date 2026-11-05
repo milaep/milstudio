@@ -4,7 +4,7 @@ const CONFIG={
  email:"contactmil01@gmail.com",
  tiktok:"https://tiktok.com/@m1l.aep",
  team:[ // 3 slides: image = file path or data URI (empty = placeholder); add or remove slides freely
-  {image:"Images/real-madrid.jpg",title:"Real Madrid",desc:"Hala Madrid y nada más."},
+  {image:"Images/real-madrid.webp",title:"Real Madrid",desc:"Hala Madrid y nada más."},
   {image:"Images/real-madrid-2.webp",title:"Real Madrid",desc:"Hala Madrid y nada más."},
   {image:"Images/real-madrid-3.webp",title:"Real Madrid",desc:"Hala Madrid y nada más."}
  ],
@@ -15,12 +15,21 @@ const CONFIG={
   {url:"https://www.tiktok.com/@m1l.aep/video/7547332558493732103",thumb:"Images/4.webp"},
   {url:"https://www.tiktok.com/@m1l.aep/video/7580373800072629525",thumb:"Images/5.webp"}
  ],
-  stats:{dataUrl:"data/stats.json",demoUrl:"data/stats.demo.json"}, // real daily snapshots; demo preview when stats.json is empty (see README)
- resources:[
+ stats:{ // manual numbers — edit these whenever they change; set value:null to show "—"
+  updated:"Nov 2026",
+  profile:"https://tiktok.com/@m1l.aep",
+  items:[
+   {icon:"followers",label:"Followers",value:334800},
+   {icon:"following",label:"Following",value:377},
+   {icon:"likes",label:"Likes",value:21500000},
+   {icon:"videos",label:"Videos",value:957}
+  ]
+ },
+ resources:[ // icons in the row above "Show details": add dock:false to keep an entry only in the details list
   {icon:"telegram",title:"Telegram Channel",desc:"Free football comps",url:"https://t.me/milaepcommunity"},
   {icon:"payhip",title:"Payhip",desc:"Editing presets",url:"https://payhip.com/milaep"},
-  {icon:"discord",title:"Hana Discord",desc:"Join the community server",url:"https://discord.gg/krnkPWnsBB"},
-  {icon:"discord",title:"Haru Discord",desc:"Join the community server",url:"https://discord.gg/ZszZEkXdnT"},
+  {icon:"discord",title:"Hana Discord",desc:"Join the community server",url:"https://discord.gg/krnkPWnsBB",dock:false},
+  {icon:"discord",title:"Haru Discord",desc:"Join the community server",url:"https://discord.gg/ZszZEkXdnT",dock:false},
   {icon:"paypal",title:"Donate",desc:"Support my edits :)",url:"https://paypal.me/muhammadzaidankamil"}
  ],
  socials:[{icon:"tiktok",label:"TikTok",url:"https://tiktok.com/@m1l.aep"},{icon:"instagram",label:"Instagram",url:"https://instagram.com/m1l.aep"}]

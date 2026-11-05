@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pitch">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found — Mil Studio</title>
+<meta name="description" content="This page does not exist on Mil Studio.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FBFCFE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B3D7C'/%3E%3Ctext x='32' y='44' font-size='36' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='%23F6C445'%3EM%3C/text%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem("mil-theme");if(t!=="night"&&t!=="pitch")t=matchMedia("(prefers-color-scheme: dark)").matches?"night":"pitch";document.documentElement.dataset.theme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==="night"?"#09090B":"#FBFCFE"}catch(e){}})()</script>
+<!-- 404s are served at the requested (wrong) path, so asset links must be site-absolute.
+     Change "/milstudio/" here and in the links below if the repo is renamed. -->
+<base href="/milstudio/">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="pitch"><svg class="lines" viewBox="0 0 1050 680" fill="none"><rect x="0" y="0" width="1050" height="680"/><path d="M525 0V680"/><circle cx="525" cy="340" r="91.5"/><circle cx="525" cy="340" r="4" fill="currentColor" stroke="none"/><g><path d="M0 138.4h165v403.2H0"/><path d="M0 248.4h55v183.2H0"/><circle cx="110" cy="340" r="4" fill="currentColor" stroke="none"/><path d="M165 266.9a91.5 91.5 0 0 1 0 146.2"/></g><g transform="translate(1050 0) scale(-1 1)"><path d="M0 138.4h165v403.2H0"/><path d="M0 248.4h55v183.2H0"/><circle cx="110" cy="340" r="4" fill="currentColor" stroke="none"/><path d="M165 266.9a91.5 91.5 0 0 1 0 146.2"/></g><path d="M0 10a10 10 0 0 1 10-10"/><path d="M1040 0a10 10 0 0 1 10 10"/><path d="M1050 670a10 10 0 0 1-10 10"/><path d="M10 680a10 10 0 0 1-10-10"/></svg></div><div class="dots"></div><div class="orb a"></div><div class="orb b"></div></div>
+
+<header class="top"><div class="in">
+ <a class="brand" href="index.html">Mil <span>Studio</span></a>
+ <a class="legal-back" href="index.html">← Back to home</a>
+ <button class="tbtn" id="theme" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode">
+  <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15Z"/></svg>
+  <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
+ </button>
+</div></header>
+
+<main class="page legal" id="top">
+ <article class="card legal-card err">
+  <span class="eyebrow">Error 404</span>
+  <h1>This page went out of play</h1>
+  <p class="legal-updated">The link may be old, or the address may be mistyped.</p>
+  <div class="btns">
+   <a class="btn p" href="index.html">Back to home</a>
+   <a class="btn" href="index.html#gallery">See my edits</a>
+  </div>
+ </article>
+
+ <footer>
+  <nav class="flinks" aria-label="Legal">
+   <a href="privacy.html">Privacy Policy</a>
+   <span aria-hidden="true">·</span>
+   <a href="terms.html">Terms of Use</a>
+  </nav>
+  <p>© <span id="yr"></span> Mil Studio</p>
+ </footer>
+</main>
+
+<script>(function(){var root=document.documentElement,btn=document.getElementById("theme"),meta=document.querySelector('meta[name="theme-color"]');
+function apply(t,p){var d=t==="night";root.dataset.theme=d?"night":"pitch";if(btn){btn.setAttribute("aria-pressed",d);btn.title=d?"Switch to light mode":"Switch to dark mode"}if(meta)meta.content=d?"#09090B":"#FBFCFE";if(p){try{localStorage.setItem("mil-theme",d?"night":"pitch")}catch(e){}}}
+var saved=null;try{saved=localStorage.getItem("mil-theme")}catch(e){}
+apply(saved==="night"||saved==="pitch"?saved:(matchMedia("(prefers-color-scheme: dark)").matches?"night":"pitch"));
+if(btn)btn.addEventListener("click",function(){apply(root.dataset.theme==="night"?"pitch":"night",true)});
+var y=document.getElementById("yr");if(y)y.textContent=new Date().getFullYear();})();</script>
+</body>
+</html>

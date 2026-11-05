@@ -1,0 +1,17 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Local env / secrets (never commit these)
+.env
+.env.*
+!.env.example
+*.pem
+
+# TikTok OAuth tokens written by scripts/tiktok.mjs auth
+data/.tiktok-token.json
