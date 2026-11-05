@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pitch">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mil Studio — Football editor &amp; creator</title>
+<meta name="description" content="Milaep is a football editor and creator from Indonesia sharing edits and free resources to help other editors grow.">
+<meta property="og:title" content="Mil Studio — Football editor &amp; creator">
+<meta property="og:description" content="Football edits, free comps, presets and a community for editors.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mil Studio">
+<meta property="og:image" content="Images/avatar.jpeg">
+<meta property="og:image:alt" content="Milaep">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="Images/avatar.jpeg">
+<meta name="twitter:image:alt" content="Milaep">
+<meta name="theme-color" content="#1E9E5A">
+<!-- After deploying, make og:image and twitter:image absolute URLs (https://your-domain/Images/avatar.jpeg) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231E9E5A'/%3E%3Ctext x='32' y='44' font-size='36' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='white'%3EM%3C/text%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem("mil-theme");if(t!=="night"&&t!=="pitch")t=matchMedia("(prefers-color-scheme: dark)").matches?"night":"pitch";document.documentElement.dataset.theme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==="night"?"#08120D":"#1E9E5A"}catch(e){}})()</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="pitch" id="pitch"><i></i><i></i><i></i><b></b></div><div class="dots"></div><div class="orb a"></div><div class="orb b"></div></div>
+<div class="spot" id="spot" aria-hidden="true"></div>
+
+<header class="top"><div class="in">
+ <a class="brand" href="#top">Mil <span>Studio</span></a>
+ <nav class="nl" id="nl" aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#links">Links</a><a href="#contact">Contact</a></nav>
+ <button class="tbtn" id="theme" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode">
+  <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15Z"/></svg>
+  <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
+ </button>
+ <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+</div></header>
+
+<main class="page" id="top">
+ <section class="card hero rv in" id="about">
+  <div>
+   <div class="eyebrow" id="loc"></div>
+   <h1 id="name"></h1>
+   <p id="bio"></p>
+   <div class="btns"><a class="btn p" href="#work">Explore My Work</a><a class="btn" id="tt" target="_blank" rel="noopener noreferrer">Follow on TikTok</a></div>
+  </div>
+     <div class="art"><div class="disc"><img src="Images/avatar.jpeg" alt="Milaep"></div></div>
+ </section>
+
+ <div class="cols" id="work">
+  <div class="rv">
+   <h2>Favorite team</h2><div id="feat"></div>
+  </div>
+  <div class="rv">
+   <h2>Statistics</h2>
+   
+   <div class="rng"><div class="stat-brand"><strong id="pn">TikTok</strong><span class="pill" id="pbadge" hidden>Preview data</span></div><div class="seg" id="seg"></div></div>
+   <div class="card ch" id="c1"></div>
+   <div class="card ch" id="c2"></div>
+  </div>
+ </div>
+
+ <section class="gal rv" id="gallery" aria-labelledby="gh">
+  <div class="ghead">
+   <h2 id="gh">Gallery</h2>
+   <div class="gnav">
+    <button class="gbtn" id="gprev" aria-label="Scroll gallery left" aria-controls="strip" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="gbtn" id="gnext" aria-label="Scroll gallery right" aria-controls="strip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+   </div>
+  </div>
+  <div class="strip" id="strip" tabindex="0" aria-label="Edits gallery"></div>
+  <a class="btn gmore" id="more" target="_blank" rel="noopener noreferrer">View more on TikTok</a>
+ </section>
+
+ <section class="dock rv" id="links">
+  <span class="eyebrow c">Contacts &amp; resources</span>
+  <div class="row" id="dock"></div>
+  <button class="btn" id="showd" aria-expanded="false" aria-controls="det">Show details</button>
+  <div class="det" id="det"></div>
+ </section>
+
+ <section class="cont" id="contact">
+  <div class="card rv"><h3>Contact me</h3><div id="ci"></div></div>
+  <form class="card rv" id="form">
+   <input name="name" placeholder="Your name" aria-label="Your name" required autocomplete="name">
+   <input name="email" type="email" placeholder="Your email" aria-label="Your email" required autocomplete="email">
+   <textarea name="message" placeholder="Message..." aria-label="Message" required></textarea>
+   <button class="btn p" type="submit">Send</button>
+  </form>
+ </section>
+</main>
+<div class="md" id="md" role="dialog" aria-modal="true" aria-label="Video preview"><div class="mb"><iframe id="mf" title="TikTok video preview" allow="fullscreen"></iframe><div class="mr"><a class="btn p" id="mo" target="_blank" rel="noopener noreferrer">Open on TikTok</a><button class="btn" id="mx">Close</button></div></div></div>
+<footer>
+ <nav class="flinks" aria-label="Legal">
+  <a href="privacy.html">Privacy Policy</a>
+  <span aria-hidden="true">·</span>
+  <a href="terms.html">Terms of Use</a>
+ </nav>
+ <p>© <span id="yr"></span> Mil Studio</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="icons.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

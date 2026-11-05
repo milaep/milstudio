@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pitch">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terms of Use — Mil Studio</title>
+<meta name="description" content="The terms that apply when you use the Mil Studio website.">
+<meta name="theme-color" content="#1E9E5A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231E9E5A'/%3E%3Ctext x='32' y='44' font-size='36' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='white'%3EM%3C/text%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem("mil-theme");if(t!=="night"&&t!=="pitch")t=matchMedia("(prefers-color-scheme: dark)").matches?"night":"pitch";document.documentElement.dataset.theme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==="night"?"#08120D":"#1E9E5A"}catch(e){}})()</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="pitch"><i></i><i></i><i></i><b></b></div><div class="dots"></div><div class="orb a"></div><div class="orb b"></div></div>
+
+<header class="top"><div class="in">
+ <a class="brand" href="index.html">Mil <span>Studio</span></a>
+ <a class="legal-back" href="index.html">← Back to home</a>
+ <button class="tbtn" id="theme" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode">
+  <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15Z"/></svg>
+  <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
+ </button>
+</div></header>
+
+<main class="page legal" id="top">
+ <article class="card legal-card">
+  <span class="eyebrow">Legal</span>
+  <h1>Terms of Use</h1>
+  <p class="legal-updated">Last updated: 5 November 2026</p>
+
+  <p>By using <strong>Mil Studio</strong>, you agree to these terms. If you do not agree, please stop using the site.</p>
+
+  <h2>Content and ownership</h2>
+  <p>Unless stated otherwise, the design, text, and original edits on this site belong to Milaep / Mil Studio. Football clips, music, and other third-party material remain the property of their respective rights holders. Please do not copy or republish my work without permission.</p>
+
+  <h2>Free resources</h2>
+  <p>Comps, presets, and other free resources may have their own license terms. Do not resell or redistribute them as your own unless the resource’s license allows it.</p>
+
+  <h2>External links</h2>
+  <p>Links to TikTok, Instagram, Telegram, Discord, Payhip, PayPal, and other services are provided for convenience. I do not control those services and am not responsible for their content, availability, or policies.</p>
+
+  <h2>No warranties</h2>
+  <p>This site is provided “as is”. I try to keep information and links accurate, but I do not guarantee that everything is complete, current, or error-free.</p>
+
+  <h2>Limitation of liability</h2>
+  <p>To the extent permitted by law, I am not liable for any loss or damage arising from the use of this site or reliance on its content.</p>
+
+  <h2>Changes</h2>
+  <p>I may update these terms from time to time. The date at the top shows the latest version.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about these terms? Email <a href="mailto:contactmil01@gmail.com">contactmil01@gmail.com</a>.</p>
+ </article>
+
+ <footer>
+  <nav class="flinks" aria-label="Legal">
+   <a href="privacy.html">Privacy Policy</a>
+   <span aria-hidden="true">·</span>
+   <a href="terms.html" aria-current="page">Terms of Use</a>
+  </nav>
+  <p>© <span id="yr"></span> Mil Studio</p>
+ </footer>
+</main>
+
+<script>(function(){var root=document.documentElement,btn=document.getElementById("theme"),meta=document.querySelector('meta[name="theme-color"]');
+function apply(t,p){var d=t==="night";root.dataset.theme=d?"night":"pitch";if(btn){btn.setAttribute("aria-pressed",d);btn.title=d?"Switch to light mode":"Switch to dark mode"}if(meta)meta.content=d?"#08120D":"#1E9E5A";if(p){try{localStorage.setItem("mil-theme",d?"night":"pitch")}catch(e){}}}
+var saved=null;try{saved=localStorage.getItem("mil-theme")}catch(e){}
+apply(saved==="night"||saved==="pitch"?saved:(matchMedia("(prefers-color-scheme: dark)").matches?"night":"pitch"));
+if(btn)btn.addEventListener("click",function(){apply(root.dataset.theme==="night"?"pitch":"night",true)});
+var y=document.getElementById("yr");if(y)y.textContent=new Date().getFullYear();})();</script>
+</body>
+</html>
