@@ -24,6 +24,18 @@ Personal website for Milaep (football editor & creator).
 - **Stats:** `stats` in `config.js` — four hand-entered numbers, no API needed (see below).
 - **Legal pages:** edit the text in `privacy.html` and `terms.html`. Keep the “Last updated” date current, and replace the contact email if it ever changes.
 
+## Publishing updates
+
+GitHub Pages rebuilds automatically about a minute after anything lands on `main`:
+
+```powershell
+git add -A
+git commit -m "Describe the change"
+git push
+```
+
+Then reload `https://milaep.github.io/milstudio/` (use a hard refresh, Ctrl+F5, if the old version is cached). If a change does not appear, check the **Actions** tab for a red build.
+
 ## Statistics
 
 The Statistics column shows four numbers, typed by hand in `config.js`:
